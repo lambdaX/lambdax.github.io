@@ -146,17 +146,18 @@
       options: {
         editable: null,
         uuid: '',
+	labels:{ 
+		  bold:'سميك',
+		  italic: 'مائل',
+		  underline : 'مهم',
+		  strikeThrough : 'ملغى'
+	},
         formattings: {
           bold: true,
           italic: true,
           strikeThrough: false,
           underline: true,
-	  labels:{ 
-		  bold:'سميك',
-		  italic: 'مائل',
-		  underline : 'مهم',
-		  strikeThrough : 'ملغى'
-	   }
+	  
         },
         buttonCssClass: null
       },
@@ -169,7 +170,7 @@
           var buttonHolder;
           buttonHolder = jQuery('<span></span>');
           buttonHolder.hallobutton({
-            label: _this.options.formattings.labels[format] || format,
+            label: _this.options.labels[format] || format,
             editable: _this.options.editable,
             command: format,
             uuid: _this.options.uuid,
