@@ -169,7 +169,7 @@
           var buttonHolder;
           buttonHolder = jQuery('<span></span>');
           buttonHolder.hallobutton({
-            label: _this.options.formattings.labels[format],
+            label: _this.options.formattings.labels[format] || format,
             editable: _this.options.editable,
             command: format,
             uuid: _this.options.uuid,
