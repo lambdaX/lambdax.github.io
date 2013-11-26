@@ -1,2 +1,0 @@
-lambdaX.github.io
-=================
