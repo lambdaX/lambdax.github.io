@@ -150,7 +150,13 @@
           bold: true,
           italic: true,
           strikeThrough: false,
-          underline: true
+          underline: true,
+	  labels:{ 
+		  bold:'سميك',
+		  italic: 'مائل',
+		  underline : 'مهم',
+		  strikeThrough : 'ملغى'
+	   }
         },
         buttonCssClass: null
       },
@@ -163,7 +169,7 @@
           var buttonHolder;
           buttonHolder = jQuery('<span></span>');
           buttonHolder.hallobutton({
-            label: format,
+            label: _this.options.formattings.labels[format],
             editable: _this.options.editable,
             command: format,
             uuid: _this.options.uuid,
@@ -861,8 +867,8 @@
           });
           return buttonset.append(buttonElement);
         };
-        buttonize("undo", "Undo");
-        buttonize("redo", "Redo");
+        buttonize("undo", "تراجع");
+        buttonize("redo", "إعادة");
         buttonset.hallobuttonset();
         return toolbar.append(buttonset);
       }
