@@ -861,8 +861,8 @@
           });
           return buttonset.append(buttonElement);
         };
-        buttonize("undo", "Undo");
-        buttonize("redo", "Redo");
+        buttonize("undo", "تراجع");
+        buttonize("redo", "إعادة");
         buttonset.hallobuttonset();
         return toolbar.append(buttonset);
       }
