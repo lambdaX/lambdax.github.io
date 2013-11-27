@@ -5,7 +5,8 @@ jQuery(document).ready(function() {
       'halloformat': {},
       'halloheadings': {},
       'hallolists': {},
-      'halloreundo': {}
+      'halloreundo': {},
+      'hallolink': {}
     },
     toolbar: 'halloToolbarFixed'
   });
