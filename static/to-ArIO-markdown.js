@@ -34,13 +34,21 @@ var toMarkdown = function(string) {
       patterns: 'hr',
       type: 'void',
       replacement: '\n\n* * *\n'
-    },
+    }/*,
     {
       patterns: 'a',
       replacement: function(str, attrs, innerHTML) {
         var href = attrs.match(attrRegExp('href')),
             title = attrs.match(attrRegExp('title'));
         return href ? '[' + innerHTML + ']' + '(' + href[1] + (title && title[1] ? ' "' + title[1] + '"' : '') + ')' : str;
+      }
+    }*/,
+    {
+      // FOR ArIO
+      patterns: 'a',
+      replacement: function(str, attrs, innerHTML) {
+        var href = attrs.match(attrRegExp('href'));
+        return href;
       }
     },
     {
